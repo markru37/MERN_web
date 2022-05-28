@@ -19,7 +19,6 @@ let Navigation = () => {
             <div className="header__logo">markru</div>
             <div className="header__list">
                 <NavLink className="header__link" to="/create">Create</NavLink>
-                <NavLink className="header__link" to="/links">Links</NavLink>
                 <a className="header__link" href="/" onClick={logoutHandler}>Logout</a>
             </div>
         </header>
