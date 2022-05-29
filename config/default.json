@@ -1,5 +1,5 @@
 {
     "port": 5000,
-    "jwtSecret": "myproject",
-    "mongoUrl": "mongodb+srv://markru:pMarik2002@cluster0.lwwzq7l.mongodb.net/?retryWrites=true&w=majority"
+    "jwtSecret": "petproj",
+    "mongoUrl": "mongodb+srv://markru:pMarik2002@cluster0.cd7ge7a.mongodb.net/?retryWrites=true&w=majority"
 }

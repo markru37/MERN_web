@@ -1,8 +1,8 @@
-// import Navigation from '../Navigation/Navigation';
+import Navigation from '../Navigation/Navigation';
 let CreatePage = () => {
     return (
         <div>
-            {/* <Navigation /> */}
+            <Navigation />
             Create Page
         </div>
     )

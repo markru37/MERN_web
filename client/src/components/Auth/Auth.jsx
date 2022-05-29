@@ -7,16 +7,19 @@ import { AuthContext } from '../../context/AuthContext';
 const Auth = () => {
     const auth = useContext(AuthContext)
     const message = useMessage()
-    const { loading, error, request, clearError } = useHttp()
+    const { loading, request, error, clearError } = useHttp()
     const [form, setForm] = useState({
-        email: '',
-        password: ''
+        email: '', password: ''
     })
 
     useEffect(() => {
         message(error)
         clearError()
     }, [error, message, clearError])
+
+    useEffect(() => {
+        window.M.updateTextFields()
+    }, [])
 
     const changeHandler = event => {
         setForm({ ...form, [event.target.name]: event.target.value })

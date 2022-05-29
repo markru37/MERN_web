@@ -55,13 +55,13 @@ router.post(
             if (!errors.isEmpty()) {
                 return res.status(400).json({
                     errors: errors.array(),
-                    message: 'Incorrect data',
+                    message: 'Incorrect date',
                 });
             }
             const { email, password } = req.body;
             const user = await User.findOne({ email });
             if (!user) {
-                return res.status(400).json({ message: 'User is not found' });
+                return res.status(400).json({ message: 'User not found' });
             }
 
             const isCoincidence = await bcrypt.compare(password, user.password);
@@ -75,7 +75,7 @@ router.post(
             });
             res.json({ token, userId: user.id });
         } catch (e) {
-            res.status(500).json({ message: 'Error, try again' });
+            res.status(500).json({ message: 'Error try again' });
         }
     },
 );
